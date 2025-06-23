@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Sans+Mono:wght@400;700&display=swap');
+
+:root {
+  --sans: 'Noto Sans', sans-serif;
+  --mono: 'Noto Sans Mono', monospace;
+
+  --bg:     #fdfdfd;
+  --fg:     #222;
+  --accent: #0066cc;
+}
+[data-theme="dark"] {
+  --bg:     #222;
+  --fg:     #fdfdfd;
+  --accent: #66b2ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--sans);
+  color: var(--fg);
+  background: var(--bg);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  border-bottom: 1px solid #eee;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header h1 {
+  font-size: 1.5rem;
+  font-family: var(--mono);
+}
+nav {
+  display: flex;
+  align-items: center;
+}
+nav a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 500;
+}
+#theme-toggle {
+  margin-left: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.portrait {
+  display: block;
+  margin: 0 auto 1.5rem;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+section {
+  margin-bottom: 3rem;
+}
+section h2 {
+  font-family: var(--mono);
+  font-size: 1.25rem;
+  border-left: 4px solid var(--accent);
+  padding-left: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+ul {
+  list-style: none;
+}
+.date {
+  color: #555;
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+}
+article + article {
+  margin-top: 1.5rem;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+[data-theme="dark"] a {
+  color: #66b2ff;  /* pick any lighter-blue that pops on #222 */
+}
+
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  border-top: 1px solid #eee;
+  font-size: 0.9rem;
+  color: #666;
+}
